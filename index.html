@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>FretLock – Fretless Bass Groove Desk</title>
+<style>
+body { font-family: system-ui, sans-serif; background:#111; color:#eee; margin:20px; }
+button, input, select { margin:4px; padding:8px; }
+#status { margin:10px 0; }
+.playhead { height:20px; background:#333; margin:10px 0; position:relative; }
+.playhead .bar { position:absolute; top:0; height:100%; background:#0a0; width:0; }
+</style>
+</head>
+<body>
+<h1>FretLock</h1>
+<p>Fretless bass groove desk. Set BPM, key, chords. Live samples. Exports on the grid.</p>
+<div id="status">Tap to start audio</div>
+<label>BPM: <input id="bpm" type="number" min="60" max="180" value="92"></label>
+<label>Key: <select id="key"><option>C</option><option>Am</option><option>G</option><option>F</option></select></label>
+<label>Chords: <input id="chords" value="Am F C G"></label>
+<button id="play">Play</button>
+<button id="stop">Stop</button>
+<button id="exportWav">Export WAV</button>
+<button id="exportMid">Export MIDI</button>
+<div class="playhead"><div class="bar" id="playheadBar"></div></div>
+<script src="app.js"></script>
+</body>
+</html>
